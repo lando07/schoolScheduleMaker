@@ -21,16 +21,24 @@ public class GradeLevel {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public void addStudent(Student s) {
+        students.add(s);
     }
 
     public ArrayList<CourseEntry> getEntries() {
         return entries;
     }
 
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
+
     public void setEntries(ArrayList<CourseEntry> entries) {
         this.entries = entries;
+    }
+
+    public void addEntry(CourseEntry c) {
+        entries.add(c);
     }
 
     public GradeLevel(int level, ArrayList<Student> students, ArrayList<CourseEntry> entries) {
