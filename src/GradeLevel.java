@@ -41,6 +41,14 @@ public class GradeLevel {
         entries.add(c);
     }
 
+    public void findCourse(String query){
+        for(CourseEntry entry : entries){
+            if(entry.getCourseName().toLowerCase().contains(query.toLowerCase()) ||
+                entry.getCourseCode().equalsIgnoreCase(query)){
+                    System.out.println(entry);
+                }
+        }
+    }
     public GradeLevel(int level, ArrayList<Student> students, ArrayList<CourseEntry> entries) {
         this.level = level;
         this.students = students;
